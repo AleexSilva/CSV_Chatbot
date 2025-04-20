@@ -15,5 +15,7 @@ openai_api_key = config('OPENAI_API_KEY')
 agent = create_csv_agent(
     OpenAI(api_key=openai_api_key), 
     '../data/financial_data.csv', 
-    verbose=True
+    verbose=True,
+    allow_dangerous_code = True
 )
+
