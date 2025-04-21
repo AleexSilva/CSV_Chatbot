@@ -19,3 +19,4 @@ agent = create_csv_agent(
     allow_dangerous_code = True
 )
 
+agent.run("which is the sum of revenue?")
