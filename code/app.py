@@ -62,7 +62,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Use secrets for API keys
-openai_api_key = st.secrets["openai"]["api_key"]
+openai_api_key = st.secrets["api_key"]
 
 # Header with logo and title
 col1, col2 = st.columns([1, 5])
@@ -154,7 +154,6 @@ if uploaded_file is not None:
         - What is the correlation between [column1] and [column2]?
         - Can you show me a summary of the data?
         - What is the highest value in [column]?
-        - Plot a histogram of [column].
         """)
     
     st.markdown('</div>', unsafe_allow_html=True)
