@@ -31,3 +31,11 @@ if uploaded_file is not None:
     agent = create_csv_agent(OpenAI(api_key=openai_api_key), csv_file_path, verbose=True, allow_dangerous_code = True)
     
     query = st.text_input("Ask a question about the dataset:")
+
+    if query:
+        
+        response = agent.run(query)
+        
+        st.write('Answer:')
+        
+        st.write(response)
